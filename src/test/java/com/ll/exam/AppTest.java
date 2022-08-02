@@ -38,6 +38,5 @@ public class AppTest {
         assertThat(names).contains("home");
         assertThat(names).contains("article");
 
-
     }
 }
