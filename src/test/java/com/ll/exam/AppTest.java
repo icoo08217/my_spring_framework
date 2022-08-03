@@ -70,12 +70,11 @@ public class AppTest {
         ArticleService articleService1 = Container.getObj(ArticleService.class);
         ArticleService articleService2 = Container.getObj(ArticleService.class);
 
-        assertThat(articleService1).isEqualTo(articleService2);
-
+        assertThat(articleService2).isEqualTo(articleService1);
     }
 
     @Test
-    public void articleController를_생성할때_articleService도_같이_생성(){
+    public void articleController를_생성할때_articleService도_같이_생성() {
         ArticleController articleController = Container.getObj(ArticleController.class);
 
         ArticleService articleService = Ut.reflection.getFieldValue(articleController, "articleService", null);
@@ -101,6 +100,6 @@ public class AppTest {
     public void ControllerManager__라우트정보_개수() {
         Map<String, RouteInfo> routeInfos = ControllerManager.getRouteInfosForTest();
 
-        assertThat(routeInfos.size()).isEqualTo(2);
+        assertThat(routeInfos.size()).isEqualTo(4);
     }
 }

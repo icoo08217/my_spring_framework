@@ -10,6 +10,8 @@ import lombok.Setter;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 
+import com.ll.exam.util.Ut;
+
 public class Rq {
     private final HttpServletRequest req;
     private final HttpServletResponse resp;
@@ -223,9 +225,4 @@ public class Rq {
         json(data, "F-1", "실패");
     }
 
-    public void setRouteInfo(RouteInfo routeInfo) {
-    }
-
-    public RouteInfo getRouteInfo() {
-    }
 }
